@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <District name="Dhaka" specialty="Bakorkhani"></District>
+      <District name="Bramman Baria" specialty="Jhodda"></District>
+      <District name="Comilla" specialty="Maynamoti"></District>
+    </div>
+  );
+}
+
+function District(props) {
+  const [power, setPower] = useState(1);
+  const boostPower = () => {
+    const newPower = power * 2;
+    setPower(newPower);
+  };
+  return (
+    <div className="district">
+      <h2>Name: {props.name}</h2>
+      <p>Specialty: {props.specialty}</p>
+      <h4>Power: {power}</h4>
+      <button onClick={boostPower}>Boost The Power</button>
     </div>
   );
 }

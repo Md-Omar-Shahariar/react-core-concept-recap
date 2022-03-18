@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.district {
+  background-color: rgb(42, 201, 153);
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+}
