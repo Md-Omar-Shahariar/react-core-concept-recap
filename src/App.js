@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <LoadPost></LoadPost>
       <District name="Dhaka" specialty="Bakorkhani"></District>
-      <District name="Bramman Baria" specialty="Jhodda"></District>
+      <District name="Bramman Baria" specialty="Jhoddah"></District>
       <District name="Comilla" specialty="Maynamoti"></District>
     </div>
   );
